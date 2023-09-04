@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+$contentWidth: 1320px;
+$fontColor1: #191919;
+$fontColor2: #ffffff;
+$fontColor3: #F94D1C;
+$btnColor1: #F9D783;
+$primaryColor1: #F0EFE9;
+$primaryColor2: rgba(240, 209, 130, 0.9294);
+$primaryColor3: #BEEBFF;
+$primaryColor4: #0E1021;
+
+$mediumDevice: 768px;
+$largeDevice: 992px;
+$xLargeDevice: 1200px;
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #FFF;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  color: $fontColor1;
+}
+button{
+  background-color: transparent;
+  border: 1px solid black;
+  padding: 8px 20px;
+  border-radius: 24px;
+  font-size: 1rem;
+}
+.btnYellow{
+  background-color: $btnColor1;
+  border-color: $btnColor1;
+}
+  //GÖR OM MQ PÅ HEADERN
+header{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: $primaryColor1;
+  // position: fixed;
+
+  .contentWrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 16px 8px 0;
+
+    .imgWrapper{
+      width: 200px;
+      height: 112px;
+      background-color: grey;
+
+      img{
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+
+    .txtWrapper{
+      display: none;
+    }
+  }
+
+  @media screen and (min-width: 576px) {
+    .contentWrapper{
+      .imgWrapper{
+        background-color: red;
+      }
+
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    .contentWrapper{
+        gap: 30px;
+
+      .imgWrapper{
+        background-color: yellow;
+      }
+      .menu{
+        display: none;
+      }
+      .txtWrapper{
+        align-self: flex-end;
+        display: flex;
+        width: 100%;
+        
+        .topWrapper{
+          display: none;
+        }
+
+        .bottomWrapper{
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-end;
+          width: 100%;
+
+          nav{
+            display: flex;
+            gap: 30px;
+
+            a{
+              text-decoration: none;
+              color: $fontColor1;
+              display: flex;
+              flex-direction: column;
+
+              &.active{
+                font-weight: 600;
+              }
+
+              &:hover::after{
+                content: "";
+                display: block;
+                border-bottom: 2px solid $fontColor1;
+                margin-top: 4px; 
+                width: 16px; 
+                align-self: center;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 992px) {
+    .contentWrapper{
+      .imgWrapper{
+        background-color: red;
+      }
+      .txtWrapper{
+        align-self: stretch;
+        flex-direction: column;
+        justify-content: space-between;
+        flex-grow: 1;
+
+        .topWrapper{
+          display: flex;
+          justify-content: space-between;
+          padding: 12px 0;
+          border-bottom: 1px solid #DADAD4;
+  
+          .infoWrapper{
+            display: flex;
+            gap: 16px;
+  
+            div{
+              display: flex;
+              gap: 9px;
+              padding-right: 11px;
+              border-right: 1px solid #DADAD4;
+  
+            p{
+              font-size: 15px;
+              font-weight: 400;
+            }
+            }
+          }
+        }
+      }
+    }
+
+  }
+  @media screen and (min-width: 1200px) {
+    .contentWrapper{
+      max-width: $contentWidth;
+
+      .imgWrapper{
+        background-color: grey;
+      }
+    }
+
+
+  }
+  @media screen and (min-width: 1400px) {
+    .contentWrapper{
+      .imgWrapper{
+        background-color: red;
+      }
+    }
+  }
+}
+
+main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+
+  .heroSection{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: $primaryColor1;
+    @media screen and (min-width: 1200px) {
+      align-items: center;
+    }
+    
+    .contentWrapper{
+      display: flex;
+      flex-direction: column;
+      @media screen and (min-width: $mediumDevice) {
+        flex-direction: row;
+      }
+      @media screen and (min-width: $xLargeDevice) {
+        width: 100%;
+        max-width: 1390px;;
+      }
+      
+      .txtWrapper{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 400px; /*TEMP*/
+        @media screen and (min-width: $largeDevice) {
+          flex:1
+        }
+      }
+      
+      .imgWrapper{
+        width: 100%;
+        background-color: #707070;
+        min-height: 500px; /*TEMP*/
+        @media screen and (min-width: $largeDevice) {
+          width: 46%;
+        }
+      }
+    }
+  }
+
+
+
+  /*****************************/
+  .logoSection{
+    border:1px solid red;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: $contentWidth;
+    margin: 80px 0;
+    padding: 27px 0;
+      
+    img{
+      height: 88px;
+      width: 224px;
+      background-color: grey;
+    }
+  }
+
+  .featuresSection{
+    display: flex;
+    width: 100%;
+    max-width: 1520px;
+    padding: 80px 100px;
+    border: 1.2px solid #191919;
+  
+    .txtWrapper{
+      flex: 0 0 30%;
+      border:1px solid red;
+    }
+
+    .featureWrapper{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      border:1px solid red;
+
+      article{
+        border:1px solid red;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 24px 40px;
+
+        img{
+          width: 40px;
+          height: 40px;
+          background-color: grey;
+        }
+
+        p{
+          width: 90%;
+        }
+      }
+    }
+  }
+}
+
+
+@media screen and (min-width: 576px) {
+
+}
+@media screen and (min-width: 768px) {
+
+}
+@media screen and (min-width: 992px) {
+
+}
+@media screen and (min-width: 1200px) {
+
+}
+@media screen and (min-width: 1400px) {
+
+}

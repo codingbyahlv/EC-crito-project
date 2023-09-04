@@ -1,0 +1,253 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #FFF;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  color: #191919;
+}
+
+button {
+  background-color: transparent;
+  border: 1px solid black;
+  padding: 8px 20px;
+  border-radius: 24px;
+  font-size: 1rem;
+}
+
+.btnYellow {
+  background-color: #F9D783;
+  border-color: #F9D783;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: #F0EFE9;
+}
+header .contentWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 16px 8px 0;
+}
+header .contentWrapper .imgWrapper {
+  width: 200px;
+  height: 112px;
+  background-color: grey;
+}
+header .contentWrapper .imgWrapper img {
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+header .contentWrapper .txtWrapper {
+  display: none;
+}
+@media screen and (min-width: 576px) {
+  header .contentWrapper .imgWrapper {
+    background-color: red;
+  }
+}
+@media screen and (min-width: 768px) {
+  header .contentWrapper {
+    gap: 30px;
+  }
+  header .contentWrapper .imgWrapper {
+    background-color: yellow;
+  }
+  header .contentWrapper .menu {
+    display: none;
+  }
+  header .contentWrapper .txtWrapper {
+    align-self: flex-end;
+    display: flex;
+    width: 100%;
+  }
+  header .contentWrapper .txtWrapper .topWrapper {
+    display: none;
+  }
+  header .contentWrapper .txtWrapper .bottomWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+  }
+  header .contentWrapper .txtWrapper .bottomWrapper nav {
+    display: flex;
+    gap: 30px;
+  }
+  header .contentWrapper .txtWrapper .bottomWrapper nav a {
+    text-decoration: none;
+    color: #191919;
+    display: flex;
+    flex-direction: column;
+  }
+  header .contentWrapper .txtWrapper .bottomWrapper nav a.active {
+    font-weight: 600;
+  }
+  header .contentWrapper .txtWrapper .bottomWrapper nav a:hover::after {
+    content: "";
+    display: block;
+    border-bottom: 2px solid #191919;
+    margin-top: 4px;
+    width: 16px;
+    align-self: center;
+  }
+}
+@media screen and (min-width: 992px) {
+  header .contentWrapper .imgWrapper {
+    background-color: red;
+  }
+  header .contentWrapper .txtWrapper {
+    align-self: stretch;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+  }
+  header .contentWrapper .txtWrapper .topWrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid #DADAD4;
+  }
+  header .contentWrapper .txtWrapper .topWrapper .infoWrapper {
+    display: flex;
+    gap: 16px;
+  }
+  header .contentWrapper .txtWrapper .topWrapper .infoWrapper div {
+    display: flex;
+    gap: 9px;
+    padding-right: 11px;
+    border-right: 1px solid #DADAD4;
+  }
+  header .contentWrapper .txtWrapper .topWrapper .infoWrapper div p {
+    font-size: 15px;
+    font-weight: 400;
+  }
+}
+@media screen and (min-width: 1200px) {
+  header .contentWrapper {
+    max-width: 1320px;
+  }
+  header .contentWrapper .imgWrapper {
+    background-color: grey;
+  }
+}
+@media screen and (min-width: 1400px) {
+  header .contentWrapper .imgWrapper {
+    background-color: red;
+  }
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  /*****************************/
+}
+main .heroSection {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: #F0EFE9;
+}
+@media screen and (min-width: 1200px) {
+  main .heroSection {
+    align-items: center;
+  }
+}
+main .heroSection .contentWrapper {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  main .heroSection .contentWrapper {
+    flex-direction: row;
+  }
+}
+@media screen and (min-width: 1200px) {
+  main .heroSection .contentWrapper {
+    width: 100%;
+    max-width: 1390px;
+  }
+}
+main .heroSection .contentWrapper .txtWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 400px; /*TEMP*/
+}
+@media screen and (min-width: 992px) {
+  main .heroSection .contentWrapper .txtWrapper {
+    flex: 1;
+  }
+}
+main .heroSection .contentWrapper .imgWrapper {
+  width: 100%;
+  background-color: #707070;
+  min-height: 500px; /*TEMP*/
+}
+@media screen and (min-width: 992px) {
+  main .heroSection .contentWrapper .imgWrapper {
+    width: 46%;
+  }
+}
+main .logoSection {
+  border: 1px solid red;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1320px;
+  margin: 80px 0;
+  padding: 27px 0;
+}
+main .logoSection img {
+  height: 88px;
+  width: 224px;
+  background-color: grey;
+}
+main .featuresSection {
+  display: flex;
+  width: 100%;
+  max-width: 1520px;
+  padding: 80px 100px;
+  border: 1.2px solid #191919;
+}
+main .featuresSection .txtWrapper {
+  flex: 0 0 30%;
+  border: 1px solid red;
+}
+main .featuresSection .featureWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  border: 1px solid red;
+}
+main .featuresSection .featureWrapper article {
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 24px 40px;
+}
+main .featuresSection .featureWrapper article img {
+  width: 40px;
+  height: 40px;
+  background-color: grey;
+}
+main .featuresSection .featureWrapper article p {
+  width: 90%;
+}
