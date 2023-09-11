@@ -1,0 +1,414 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  color: #191919;
+}
+
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  background-color: transparent;
+  border: 1px solid black;
+  padding: 16px 24px;
+  border-radius: 24px;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.btnYellow {
+  background-color: #f9d783;
+  border-color: #f9d783;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: #f0efe9;
+}
+header .contentWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 16px 8px 0;
+}
+@media screen and (min-width: 768px) {
+  header .contentWrapper {
+    gap: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  header .contentWrapper {
+    max-width: 1320px;
+  }
+}
+header .contentWrapper .imgWrapper {
+  display: flex;
+  justify-content: center;
+  padding: 16px;
+  width: 200px;
+  height: 112px;
+}
+header .contentWrapper .imgWrapper img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+@media screen and (min-width: 768px) {
+  header .contentWrapper .menu {
+    display: none;
+  }
+}
+header .contentWrapper .txtWrapper {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  header .contentWrapper .txtWrapper {
+    display: flex;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 992px) {
+  header .contentWrapper .txtWrapper {
+    align-self: stretch;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+  }
+}
+@media screen and (min-width: 768px) {
+  header .contentWrapper .txtWrapper .topWrapper {
+    display: none;
+  }
+}
+@media screen and (min-width: 992px) {
+  header .contentWrapper .txtWrapper .topWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #dadad4;
+  }
+}
+@media screen and (min-width: 992px) {
+  header .contentWrapper .txtWrapper .topWrapper .infoWrapper {
+    display: flex;
+    gap: 16px;
+  }
+}
+@media screen and (min-width: 992px) {
+  header .contentWrapper .txtWrapper .topWrapper .infoWrapper div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 9px;
+    padding-right: 11px;
+    border-right: 1px solid #dadad4;
+  }
+}
+header .contentWrapper .txtWrapper .topWrapper .infoWrapper div.lastOne {
+  border-right: none;
+}
+@media screen and (min-width: 992px) {
+  header .contentWrapper .txtWrapper .topWrapper .infoWrapper div p {
+    font-size: 15px;
+    font-weight: 400;
+  }
+}
+header .contentWrapper .txtWrapper .topWrapper .socialMediaIconsWrapper {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 24px;
+}
+@media screen and (min-width: 768px) {
+  header .contentWrapper .txtWrapper .bottomWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 768px) {
+  header .contentWrapper .txtWrapper .bottomWrapper nav {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    padding-top: 7px;
+  }
+}
+header .contentWrapper .txtWrapper .bottomWrapper nav a {
+  text-decoration: none;
+  color: #191919;
+  display: flex;
+  flex-direction: column;
+}
+header .contentWrapper .txtWrapper .bottomWrapper nav a.active {
+  font-weight: 600;
+}
+header .contentWrapper .txtWrapper .bottomWrapper nav a:hover::after {
+  content: "";
+  display: block;
+  border-bottom: 2px solid #191919;
+  margin-top: 4px;
+  width: 16px;
+  align-self: center;
+}
+header .contentWrapper .txtWrapper .bottomWrapper .loginBtn {
+  padding: 10px 24px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+main .heroSection {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: #f0efe9;
+  background-image: url("/images/bg_white_lines_left.svg");
+  background-repeat: no-repeat;
+  background-position-y: 100%;
+}
+@media screen and (min-width: 1200px) {
+  main .heroSection {
+    align-items: center;
+  }
+}
+main .heroSection .contentWrapper {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  main .heroSection .contentWrapper {
+    flex-direction: row;
+  }
+}
+@media screen and (min-width: 1200px) {
+  main .heroSection .contentWrapper {
+    width: 100%;
+    max-width: 1390px;
+  }
+}
+main .heroSection .contentWrapper .txtWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 32px;
+  padding: 60px 16px 80px 16px;
+}
+@media screen and (min-width: 768px) {
+  main .heroSection .contentWrapper .txtWrapper {
+    padding: 90px 16px 120px 16px;
+  }
+}
+@media screen and (min-width: 992px) {
+  main .heroSection .contentWrapper .txtWrapper {
+    flex: 1;
+    padding: 120px 16px 160px 16px;
+  }
+}
+main .heroSection .contentWrapper .txtWrapper h1 {
+  font-family: "DM Sans", sans-serif;
+  font-size: 48px;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  main .heroSection .contentWrapper .txtWrapper h1 {
+    text-align: left;
+  }
+}
+@media screen and (min-width: 992px) {
+  main .heroSection .contentWrapper .txtWrapper h1 {
+    font-size: 72px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  main .heroSection .contentWrapper .txtWrapper h1 {
+    font-size: 84px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  main .heroSection .contentWrapper .txtWrapper h1 {
+    font-size: 96px;
+  }
+}
+main .heroSection .contentWrapper .txtWrapper p {
+  text-align: center;
+  font-size: 20px;
+  color: #595957;
+}
+@media screen and (min-width: 768px) {
+  main .heroSection .contentWrapper .txtWrapper p {
+    text-align: left;
+  }
+}
+main .heroSection .contentWrapper .txtWrapper .btnWrapper {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 16px;
+}
+@media screen and (min-width: 768px) {
+  main .heroSection .contentWrapper .txtWrapper .btnWrapper {
+    justify-content: flex-start;
+  }
+}
+main .heroSection .contentWrapper .imgWrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding-right: 16px;
+}
+@media screen and (min-width: 992px) {
+  main .heroSection .contentWrapper .imgWrapper {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 1400px) {
+  main .heroSection .contentWrapper .imgWrapper {
+    width: 46%;
+    align-items: flex-end;
+    padding-right: 0;
+  }
+}
+main .heroSection .contentWrapper .imgWrapper img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+main .logoSection {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 80px 0;
+}
+@media screen and (min-width: 1200px) {
+  main .logoSection {
+    max-width: 1320px;
+  }
+}
+main .logoSection img {
+  height: 88px;
+  width: 224px;
+  flex-grow: 1;
+}
+main .featuresSection {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 100%;
+  border: 1.2px solid rgba(89, 89, 87, 0.301);
+  padding: 64px 16px;
+}
+@media screen and (min-width: 992px) {
+  main .featuresSection {
+    flex-direction: row;
+    gap: 72px;
+    padding: 80px 100px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  main .featuresSection {
+    max-width: 1520px;
+  }
+}
+main .featuresSection .txtWrapper {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 16px;
+}
+@media screen and (min-width: 992px) {
+  main .featuresSection .txtWrapper {
+    flex: 1 0 50%;
+    text-align: left;
+  }
+}
+@media screen and (min-width: 1200px) {
+  main .featuresSection .txtWrapper {
+    flex: 1 0 40%;
+  }
+}
+main .featuresSection .txtWrapper p {
+  color: #f94d1c;
+  font-weight: 500;
+  font-size: 18px;
+}
+main .featuresSection .txtWrapper h2 {
+  font-family: "DM Sans", sans-serif;
+  font-size: 40px;
+}
+@media screen and (min-width: 768px) {
+  main .featuresSection .txtWrapper h2 {
+    font-size: 48px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  main .featuresSection .txtWrapper h2 {
+    font-size: 54px;
+  }
+}
+main .featuresSection .txtWrapper .learnMoreBtn {
+  margin-top: 48px;
+}
+main .featuresSection .featureWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+@media screen and (min-width: 576px) {
+  main .featuresSection .featureWrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+main .featuresSection .featureWrapper article {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 24px 40px;
+}
+@media screen and (min-width: 576px) {
+  main .featuresSection .featureWrapper article {
+    flex: 1 1 45%;
+  }
+}
+@media screen and (min-width: 992px) {
+  main .featuresSection .featureWrapper article {
+    padding: 24px 0px;
+  }
+}
+main .featuresSection .featureWrapper article i {
+  font-size: 40px;
+}
+main .featuresSection .featureWrapper article h3 {
+  font-family: "DM Sans", sans-serif;
+  font-size: 22px;
+}
+@media screen and (min-width: 1200px) {
+  main .featuresSection .featureWrapper article p {
+    width: 90%;
+  }
+}
