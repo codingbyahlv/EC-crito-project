@@ -12,26 +12,70 @@ body {
   align-items: center;
   background-color: #fff;
   font-family: "Inter", sans-serif;
-  font-weight: 500;
+  font-weight: 400;
   color: #191919;
 }
 
-button {
+.button {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 8px;
-  background-color: transparent;
+  background-color: #f0efe9;
   border: 1px solid black;
   padding: 16px 24px;
-  border-radius: 24px;
+  border-radius: 27px;
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 400;
+  text-decoration: none;
+  color: #191919;
 }
 
 .btnYellow {
   background-color: #f9d783;
   border-color: #f9d783;
+}
+
+.btnWhite {
+  background-color: #ffffff;
+}
+
+.btnBlack {
+  background-color: #191919;
+  border-color: #191919;
+  color: #ffffff;
+}
+
+.btnRound {
+  width: 53.5px;
+  height: 53.5px;
+  border-radius: 50%;
+  padding: 0;
+}
+
+.sectionHeadingSmall {
+  color: #f94d1c;
+  font-weight: 500;
+  font-size: 18px;
+  align-self: flex-start;
+}
+
+.sectionHeadingBig {
+  font-family: "DM Sans", sans-serif;
+  font-size: 40px;
+  line-height: 120%;
+  margin-top: 16px;
+  align-self: flex-start;
+}
+@media screen and (min-width: 768px) {
+  .sectionHeadingBig {
+    font-size: 48px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .sectionHeadingBig {
+    font-size: 48px;
+  }
 }
 
 header {
@@ -56,6 +100,7 @@ header .contentWrapper {
 @media screen and (min-width: 1200px) {
   header .contentWrapper {
     max-width: 1320px;
+    padding: 0;
   }
 }
 header .contentWrapper .imgWrapper {
@@ -231,6 +276,7 @@ main .heroSection .contentWrapper .txtWrapper {
 main .heroSection .contentWrapper .txtWrapper h1 {
   font-family: "DM Sans", sans-serif;
   font-size: 48px;
+  line-height: 104%;
   text-align: center;
 }
 @media screen and (min-width: 768px) {
@@ -256,6 +302,7 @@ main .heroSection .contentWrapper .txtWrapper h1 {
 main .heroSection .contentWrapper .txtWrapper p {
   text-align: center;
   font-size: 20px;
+  line-height: 160%;
   color: #595957;
 }
 @media screen and (min-width: 768px) {
@@ -319,26 +366,30 @@ main .featuresSection {
   flex-direction: column;
   gap: 40px;
   width: 100%;
+  padding: 64px 5%;
   border: 1.2px solid rgba(89, 89, 87, 0.301);
-  padding: 64px 16px;
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 768px) {
+  main .featuresSection {
+    padding: 80px 5%;
+  }
+}
+@media screen and (min-width: 1200px) {
   main .featuresSection {
     flex-direction: row;
     gap: 72px;
-    padding: 80px 100px;
   }
 }
 @media screen and (min-width: 1400px) {
   main .featuresSection {
+    padding: 80px 100px;
     max-width: 1520px;
+    gap: 100px;
   }
 }
 main .featuresSection .txtWrapper {
   display: flex;
   flex-direction: column;
-  text-align: center;
-  gap: 16px;
 }
 @media screen and (min-width: 992px) {
   main .featuresSection .txtWrapper {
@@ -348,30 +399,11 @@ main .featuresSection .txtWrapper {
 }
 @media screen and (min-width: 1200px) {
   main .featuresSection .txtWrapper {
-    flex: 1 0 40%;
-  }
-}
-main .featuresSection .txtWrapper p {
-  color: #f94d1c;
-  font-weight: 500;
-  font-size: 18px;
-}
-main .featuresSection .txtWrapper h2 {
-  font-family: "DM Sans", sans-serif;
-  font-size: 40px;
-}
-@media screen and (min-width: 768px) {
-  main .featuresSection .txtWrapper h2 {
-    font-size: 48px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  main .featuresSection .txtWrapper h2 {
-    font-size: 54px;
+    flex: 1 0 35%;
   }
 }
 main .featuresSection .txtWrapper .learnMoreBtn {
-  margin-top: 48px;
+  margin-top: 40px;
 }
 main .featuresSection .featureWrapper {
   display: flex;
@@ -392,7 +424,7 @@ main .featuresSection .featureWrapper article {
 }
 @media screen and (min-width: 576px) {
   main .featuresSection .featureWrapper article {
-    flex: 1 1 45%;
+    flex: 0 1 45%;
   }
 }
 @media screen and (min-width: 992px) {
@@ -402,13 +434,252 @@ main .featuresSection .featureWrapper article {
 }
 main .featuresSection .featureWrapper article i {
   font-size: 40px;
+  margin-bottom: 14px;
 }
 main .featuresSection .featureWrapper article h3 {
   font-family: "DM Sans", sans-serif;
   font-size: 22px;
 }
+main .featuresSection .featureWrapper article p {
+  line-height: 156%;
+  font-weight: 400;
+}
 @media screen and (min-width: 1200px) {
   main .featuresSection .featureWrapper article p {
     width: 90%;
   }
+}
+main .aboutSection .contentWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 80px 0;
+}
+@media screen and (min-width: 576px) {
+  main .aboutSection .contentWrapper {
+    padding: 0 5%;
+  }
+}
+@media screen and (min-width: 992px) {
+  main .aboutSection .contentWrapper {
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    gap: 32px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  main .aboutSection .contentWrapper {
+    justify-content: space-between;
+    margin: 120px 0;
+    max-width: 1320px;
+  }
+}
+main .aboutSection .contentWrapper .txtWrapper {
+  width: 90%;
+}
+@media screen and (min-width: 992px) {
+  main .aboutSection .contentWrapper .txtWrapper {
+    flex: 0 0 50%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  main .aboutSection .contentWrapper .txtWrapper {
+    flex: 0 0 40%;
+  }
+}
+main .aboutSection .contentWrapper .txtWrapper .pWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 24px 0 56px 0;
+}
+main .aboutSection .contentWrapper .txtWrapper .pWrapper p {
+  font-weight: 400;
+  line-height: 200%;
+}
+main .aboutSection .contentWrapper .txtWrapper .btnWrapper {
+  display: flex;
+  gap: 32px;
+}
+main .aboutSection .contentWrapper .txtWrapper .btnWrapper .playBtnWrapper {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+main .aboutSection .contentWrapper .txtWrapper .btnWrapper .playBtnWrapper .playBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .aboutSection .contentWrapper .txtWrapper .btnWrapper .playBtnWrapper .playBtn i {
+  margin-left: 5px;
+}
+main .aboutSection .contentWrapper .imgWrapper {
+  position: relative;
+  padding-top: 64px;
+  width: 100%;
+}
+@media screen and (min-width: 992px) {
+  main .aboutSection .contentWrapper .imgWrapper {
+    padding-top: 0;
+    flex: 1 0 45%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  main .aboutSection .contentWrapper .imgWrapper {
+    flex: 0 0 45%;
+  }
+}
+main .aboutSection .contentWrapper .imgWrapper .img {
+  width: 100%;
+}
+@media screen and (min-width: 992px) {
+  main .aboutSection .contentWrapper .imgWrapper .img {
+    height: 100%;
+    -o-object-fit: fill;
+       object-fit: fill;
+  }
+}
+@media screen and (min-width: 1200px) {
+  main .aboutSection .contentWrapper .imgWrapper .img {
+    padding-left: 56px;
+  }
+}
+main .aboutSection .contentWrapper .imgWrapper .linesOverlay {
+  position: absolute;
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  main .aboutSection .contentWrapper .imgWrapper .linesOverlay {
+    display: block;
+    left: -32px;
+    padding: 16px 0 0 0;
+  }
+}
+@media screen and (min-width: 992px) {
+  main .aboutSection .contentWrapper .imgWrapper .linesOverlay {
+    padding: 16px 0 0 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  main .aboutSection .contentWrapper .imgWrapper .linesOverlay {
+    padding: 24px 0 0 24px;
+    left: 0;
+  }
+}
+main .aboutSection .contentWrapper .imgWrapper .imgTxtWrapper {
+  position: absolute;
+  bottom: 2%;
+  left: 2%;
+  background-color: #beebff;
+  max-width: 96%;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+@media screen and (min-width: 576px) {
+  main .aboutSection .contentWrapper .imgWrapper .imgTxtWrapper {
+    max-width: 368px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  main .aboutSection .contentWrapper .imgWrapper .imgTxtWrapper {
+    bottom: 40px;
+    left: 0;
+    padding: 30px 24px 54px 24px;
+    gap: 13px;
+  }
+}
+main .aboutSection .contentWrapper .imgWrapper .imgTxtWrapper h3 {
+  font-size: 20px;
+  line-height: 150%;
+  font-weight: 700;
+}
+main .aboutSection .contentWrapper .imgWrapper .imgTxtWrapper h3 span {
+  color: #f94d1c;
+  font-size: 16px;
+}
+main .aboutSection .contentWrapper .imgWrapper .imgTxtWrapper p {
+  line-height: 162%;
+  font-weight: 400;
+}
+main .servicesSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-color: #f0efe9;
+  background-image: url("/images/bg_white_lines_right.svg");
+  background-repeat: no-repeat;
+  background-position-y: 100%;
+  background-position-x: 100%;
+}
+@media screen and (min-width: 1200px) {
+  main .servicesSection {
+    align-items: center;
+  }
+}
+main .servicesSection .contentWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  margin: 80px 0;
+}
+@media screen and (min-width: 1200px) {
+  main .servicesSection .contentWrapper {
+    max-width: 1320px;
+  }
+}
+main .servicesSection .contentWrapper h2 {
+  max-width: 504px;
+}
+main .servicesSection .contentWrapper .serviceWrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin: 48px 0;
+}
+main .servicesSection .contentWrapper .serviceWrapper article {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  padding: 48px 30px;
+}
+@media screen and (min-width: 576px) {
+  main .servicesSection .contentWrapper .serviceWrapper article {
+    flex: 1 1 47%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  main .servicesSection .contentWrapper .serviceWrapper article {
+    flex: 1 1 23%;
+  }
+}
+main .servicesSection .contentWrapper .serviceWrapper article:hover {
+  background-color: #edcf87;
+}
+main .servicesSection .contentWrapper .serviceWrapper article:hover .button {
+  background-color: #ffffff;
+  border-color: #fff;
+  color: #191919;
+}
+main .servicesSection .contentWrapper .serviceWrapper article h3 {
+  line-height: 150%;
+  margin-top: 34px;
+}
+main .servicesSection .contentWrapper .serviceWrapper article p {
+  line-height: 175%;
+}
+main .servicesSection .contentWrapper .serviceWrapper article a {
+  margin-top: 24px;
+  align-self: flex-end;
+}
+main .servicesSection .contentWrapper .serviceWrapper article a i {
+  margin-left: 2px;
 }
