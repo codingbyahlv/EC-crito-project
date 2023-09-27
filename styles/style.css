@@ -21,12 +21,12 @@ body {
   justify-content: center;
   align-items: center;
   gap: 8px;
-  background-color: #f0efe9;
+  background-color: transparent;
   border: 1px solid black;
   padding: 16px 24px;
   border-radius: 27px;
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 500;
   text-decoration: none;
   color: #191919;
 }
@@ -76,6 +76,23 @@ body {
   .sectionHeadingBig {
     font-size: 48px;
   }
+}
+
+.socialMediaIconsWrapper {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 24px;
+}
+
+.dotWrapper {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 48px;
+}
+.dotWrapper .fa-circle {
+  font-size: 14px;
 }
 
 header {
@@ -176,12 +193,6 @@ header .contentWrapper .txtWrapper .topWrapper .infoWrapper div.lastOne {
     font-size: 15px;
     font-weight: 400;
   }
-}
-header .contentWrapper .txtWrapper .topWrapper .socialMediaIconsWrapper {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  font-size: 24px;
 }
 @media screen and (min-width: 768px) {
   header .contentWrapper .txtWrapper .bottomWrapper {
@@ -461,7 +472,7 @@ main .aboutSection .contentWrapper {
   justify-content: center;
   align-items: center;
   width: 90%;
-  margin: 80px 0;
+  padding: 100px 0;
 }
 @media screen and (min-width: 992px) {
   main .aboutSection .contentWrapper {
@@ -551,19 +562,9 @@ main .aboutSection .contentWrapper .imgWrapper .img {
 }
 main .aboutSection .contentWrapper .imgWrapper .linesOverlay {
   position: absolute;
-  display: none;
-}
-@media screen and (min-width: 768px) {
-  main .aboutSection .contentWrapper .imgWrapper .linesOverlay {
-    display: block;
-    left: -32px;
-    padding: 16px 0 0 0;
-  }
-}
-@media screen and (min-width: 992px) {
-  main .aboutSection .contentWrapper .imgWrapper .linesOverlay {
-    padding: 16px 0 0 0;
-  }
+  left: -32px;
+  width: 40%;
+  padding: 16px 0 0 0;
 }
 @media screen and (min-width: 1200px) {
   main .aboutSection .contentWrapper .imgWrapper .linesOverlay {
@@ -840,15 +841,544 @@ main .whyUsSection .rightWrapper .background {
     width: calc(100% + 100px);
   }
 }
-main .projectsSection img {
-  width: 200px;
-  height: 100px;
+main .projectsSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
-main .teamSection img {
-  width: 200px;
-  height: 100px;
+main .projectsSection .contentWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  padding: 40px 0 100px 0;
 }
-main .testimonialSection img {
-  width: 50px;
-  height: 50px;
+@media screen and (min-width: 1200px) {
+  main .projectsSection .contentWrapper {
+    max-width: 1320px;
+  }
+}
+main .projectsSection .contentWrapper .sectionHeadingSmall,
+main .projectsSection .contentWrapper .sectionHeadingBig {
+  width: 100%;
+  text-align: center;
+}
+main .projectsSection .contentWrapper .projectsWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin: 48px 0;
+}
+@media screen and (min-width: 768px) {
+  main .projectsSection .contentWrapper .projectsWrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+main .projectsSection .contentWrapper .projectsWrapper article {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+@media screen and (min-width: 768px) {
+  main .projectsSection .contentWrapper .projectsWrapper article {
+    flex: 1 1 47%;
+  }
+}
+main .projectsSection .contentWrapper .projectsWrapper article img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+main .projectsSection .contentWrapper .projectsWrapper article h3 {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 700;
+  line-height: 150%;
+  font-size: 22px;
+  flex-grow: 1;
+  border-bottom: 1px solid #595957;
+  padding-bottom: 16px;
+}
+main .projectsSection .contentWrapper .projectsWrapper article a {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 114%;
+  text-decoration: none;
+  color: #191919;
+  align-self: flex-end;
+  justify-self: flex-end;
+}
+main .teamSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-color: #edcf87;
+  padding: 100px 0 80px 0;
+}
+main .teamSection .contentWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+@media screen and (min-width: 1200px) {
+  main .teamSection .contentWrapper {
+    max-width: 1320px;
+  }
+}
+main .teamSection .contentWrapper .topWrapper {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  main .teamSection .contentWrapper .topWrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+}
+main .teamSection .contentWrapper .topWrapper a {
+  align-self: flex-end;
+  white-space: nowrap;
+  margin-top: 24px;
+}
+main .teamSection .contentWrapper .cardWrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  margin-top: 40px;
+}
+@media screen and (min-width: 576px) {
+  main .teamSection .contentWrapper .cardWrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (min-width: 768px) {
+  main .teamSection .contentWrapper .cardWrapper {
+    margin-top: 100px;
+  }
+}
+@media screen and (min-width: 992px) {
+  main .teamSection .contentWrapper .cardWrapper {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+main .teamSection .contentWrapper .cardWrapper article img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+main .teamSection .contentWrapper .cardWrapper article h3 {
+  margin-top: 24px;
+}
+main .teamSection .contentWrapper .cardWrapper article p {
+  margin-top: 12px;
+}
+main .testimonialSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-color: #edcf87;
+  padding: 0 0 100px 0;
+}
+main .testimonialSection .background {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #f0efe9;
+  padding: 100px 0;
+}
+@media screen and (min-width: 1400px) {
+  main .testimonialSection .background {
+    max-width: 1520px;
+  }
+}
+main .testimonialSection .background .contentWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+@media screen and (min-width: 1200px) {
+  main .testimonialSection .background .contentWrapper {
+    max-width: 1320px;
+  }
+}
+main .testimonialSection .background .contentWrapper .sectionHeadingSmall,
+main .testimonialSection .background .contentWrapper .sectionHeadingBig {
+  width: 100%;
+  text-align: center;
+}
+main .testimonialSection .background .contentWrapper .cardWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+  margin-top: 80px;
+}
+@media screen and (min-width: 768px) {
+  main .testimonialSection .background .contentWrapper .cardWrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+  }
+}
+main .testimonialSection .background .contentWrapper .cardWrapper article {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+@media screen and (min-width: 768px) {
+  main .testimonialSection .background .contentWrapper .cardWrapper article {
+    flex: 1 1 47%;
+  }
+}
+@media screen and (min-width: 992px) {
+  main .testimonialSection .background .contentWrapper .cardWrapper article {
+    flex: 0 1 30%;
+  }
+}
+main .testimonialSection .background .contentWrapper .cardWrapper article .starWrapper {
+  color: #f94d1c;
+}
+main .testimonialSection .background .contentWrapper .cardWrapper article .reviewTxt {
+  font-size: 18px;
+  line-height: 188%;
+}
+main .testimonialSection .background .contentWrapper .cardWrapper article .infoWrapper {
+  display: flex;
+  gap: 16px;
+}
+main .testimonialSection .background .contentWrapper .cardWrapper article .infoWrapper img {
+  width: 70px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-radius: 50%;
+}
+main .testimonialSection .background .contentWrapper .cardWrapper article .infoWrapper .txtWrapper h4 {
+  font-family: "DM Sans", sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 150%;
+}
+main .testimonialSection .background .contentWrapper .cardWrapper article .infoWrapper .txtWrapper p {
+  color: #f94d1c;
+  line-height: 175%;
+}
+main .testimonialSection .background .contentWrapper .cardWrapper .btnWrapper {
+  display: flex;
+  justify-content: center;
+}
+@media screen and (min-width: 768px) {
+  main .testimonialSection .background .contentWrapper .cardWrapper .btnWrapper {
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex: 1 1 47%;
+  }
+}
+@media screen and (min-width: 992px) {
+  main .testimonialSection .background .contentWrapper .cardWrapper .btnWrapper {
+    justify-content: center;
+    margin-top: 32px;
+  }
+}
+main .newsSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 100px 0;
+}
+main .newsSection .contentWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+@media screen and (min-width: 1200px) {
+  main .newsSection .contentWrapper {
+    max-width: 1320px;
+  }
+}
+main .newsSection .contentWrapper .topWrapper {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 1200px) {
+  main .newsSection .contentWrapper .topWrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+}
+main .newsSection .contentWrapper .topWrapper a {
+  align-self: flex-end;
+  white-space: nowrap;
+  margin-top: 24px;
+}
+main .newsSection .contentWrapper .cardWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+  margin-top: 32px;
+}
+@media screen and (min-width: 768px) {
+  main .newsSection .contentWrapper .cardWrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+  }
+}
+main .newsSection .contentWrapper .cardWrapper article {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+@media screen and (min-width: 768px) {
+  main .newsSection .contentWrapper .cardWrapper article {
+    flex: 0 1 47%;
+  }
+}
+@media screen and (min-width: 992px) {
+  main .newsSection .contentWrapper .cardWrapper article {
+    flex: 0 1 30%;
+  }
+}
+main .newsSection .contentWrapper .cardWrapper article .imgWrapper {
+  position: relative;
+}
+main .newsSection .contentWrapper .cardWrapper article .imgWrapper .dateWrapper {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #edcf87;
+}
+main .newsSection .contentWrapper .cardWrapper article .imgWrapper .dateWrapper .date {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 100%;
+  font-family: "DM Sans", sans-serif;
+}
+main .newsSection .contentWrapper .cardWrapper article .imgWrapper .dateWrapper .month {
+  color: #595957;
+  line-height: 130%;
+}
+main .newsSection .contentWrapper .cardWrapper article .imgWrapper img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+main .newsSection .contentWrapper .cardWrapper article .category {
+  color: #595957;
+}
+main .newsSection .contentWrapper .cardWrapper article h3 {
+  font-family: "DM Sans", sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 150%;
+}
+main .newsSection .contentWrapper .cardWrapper article .txt {
+  color: #595957;
+  line-height: 175%;
+}
+main .signupSection {
+  background-color: #f0efe9;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 100px 0;
+  background-image: url("/images/bg_grey_lines.svg");
+  background-repeat: no-repeat;
+  background-position-y: 80%;
+  background-position-x: 100%;
+}
+main .signupSection .contentWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+@media screen and (min-width: 1200px) {
+  main .signupSection .contentWrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    max-width: 1320px;
+  }
+}
+main .signupSection .contentWrapper form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 40px;
+}
+@media screen and (min-width: 576px) {
+  main .signupSection .contentWrapper form {
+    flex-direction: row;
+  }
+}
+@media screen and (min-width: 1200px) {
+  main .signupSection .contentWrapper form {
+    margin: 0;
+  }
+}
+main .signupSection .contentWrapper form input {
+  padding: 16px 24px;
+  border: none;
+  border-radius: 27px;
+  flex-grow: 1;
+  min-width: 300px;
+}
+@media screen and (min-width: 576px) {
+  main .signupSection .contentWrapper form input {
+    max-width: 400px;
+  }
+}
+main .signupSection .contentWrapper form input::-moz-placeholder {
+  color: #b6b7bc;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+}
+main .signupSection .contentWrapper form input::placeholder {
+  color: #b6b7bc;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+}
+main .signupSection .contentWrapper form button {
+  align-self: center;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-color: #0e1021;
+  color: #ffffff;
+}
+footer .background {
+  background-image: url("/images/bg_white_lines_right_footer.svg");
+  background-repeat: no-repeat;
+  background-position-y: 100%;
+  background-position-x: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+footer .background .contentWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  padding: 120px 0 100px 0;
+}
+@media screen and (min-width: 1200px) {
+  footer .background .contentWrapper {
+    max-width: 1320px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  footer .background .contentWrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 40px;
+  }
+}
+footer .background .contentWrapper .logoInfoWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  color: #b6b7bc;
+  padding-bottom: 40px;
+}
+@media screen and (min-width: 992px) {
+  footer .background .contentWrapper .logoInfoWrapper {
+    flex-direction: row;
+    align-items: flex-end;
+  }
+}
+@media screen and (min-width: 1400px) {
+  footer .background .contentWrapper .logoInfoWrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+  }
+}
+@media screen and (min-width: 1400px) {
+  footer .background .contentWrapper .logoInfoWrapper p {
+    max-width: 400px;
+    line-height: 162%;
+  }
+}
+footer .background .contentWrapper .cardWrapper {
+  display: flex;
+  gap: 40px;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+@media screen and (min-width: 1400px) {
+  footer .background .contentWrapper .cardWrapper {
+    flex-wrap: nowrap;
+    flex-grow: 1;
+  }
+}
+footer .background .contentWrapper .cardWrapper article {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 40%;
+  min-width: 130px;
+}
+@media screen and (min-width: 576px) {
+  footer .background .contentWrapper .cardWrapper article {
+    flex: 1 1 45%;
+  }
+}
+@media screen and (min-width: 992px) {
+  footer .background .contentWrapper .cardWrapper article {
+    flex: 1 1 20%;
+  }
+}
+footer .background .contentWrapper .cardWrapper article h4 {
+  color: #ffffff;
+  margin-bottom: 18px;
+}
+@media screen and (min-width: 992px) {
+  footer .background .contentWrapper .cardWrapper article h4 {
+    margin-bottom: 24px;
+  }
+}
+footer .background .contentWrapper .cardWrapper article a {
+  text-decoration: none;
+  color: #b6b7bc;
+  font-weight: 500;
+  padding: 8px 0;
+  list-style: none;
+}
+@media screen and (min-width: 576px) {
+  footer .background .contentWrapper .cardWrapper article a {
+    white-space: nowrap;
+  }
+}
+footer .copyright {
+  width: 100%;
+  border-top: 1px solid #b6b7bc;
+  padding: 24px 0;
+  display: flex;
+  justify-content: center;
+  background-color: #0e1021;
+}
+footer .copyright .copyrightContentWrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1320px;
+}
+footer .copyright .copyrightContentWrapper p {
+  color: #b6b7bc;
+  line-height: 162%;
 }
