@@ -449,18 +449,19 @@ main .featuresSection .featureWrapper article p {
     width: 90%;
   }
 }
+main .aboutSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
 main .aboutSection .contentWrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 90%;
   margin: 80px 0;
-}
-@media screen and (min-width: 576px) {
-  main .aboutSection .contentWrapper {
-    padding: 0 5%;
-  }
 }
 @media screen and (min-width: 992px) {
   main .aboutSection .contentWrapper {
@@ -474,10 +475,11 @@ main .aboutSection .contentWrapper {
     justify-content: space-between;
     margin: 120px 0;
     max-width: 1320px;
+    padding: 0;
   }
 }
 main .aboutSection .contentWrapper .txtWrapper {
-  width: 90%;
+  width: 100%;
 }
 @media screen and (min-width: 992px) {
   main .aboutSection .contentWrapper .txtWrapper {
@@ -617,11 +619,6 @@ main .servicesSection {
   background-position-y: 100%;
   background-position-x: 100%;
 }
-@media screen and (min-width: 1200px) {
-  main .servicesSection {
-    align-items: center;
-  }
-}
 main .servicesSection .contentWrapper {
   display: flex;
   flex-direction: column;
@@ -682,4 +679,176 @@ main .servicesSection .contentWrapper .serviceWrapper article a {
 }
 main .servicesSection .contentWrapper .serviceWrapper article a i {
   margin-left: 2px;
+}
+main .whyUsSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+  padding: 100px 0;
+}
+@media screen and (min-width: 1200px) {
+  main .whyUsSection {
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+  }
+}
+main .whyUsSection .leftWrapper {
+  width: 90%;
+}
+@media screen and (min-width: 1200px) {
+  main .whyUsSection .leftWrapper {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+main .whyUsSection .leftWrapper .leftContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media screen and (min-width: 768px) {
+  main .whyUsSection .leftWrapper .leftContent {
+    flex: 0 1 645px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  main .whyUsSection .leftWrapper .leftContent {
+    flex-direction: column;
+    padding-left: 48px;
+    padding-right: 20%;
+    align-items: flex-start;
+  }
+}
+@media screen and (min-width: 1400px) {
+  main .whyUsSection .leftWrapper .leftContent {
+    padding-left: 0;
+  }
+}
+main .whyUsSection .leftWrapper .leftContent .articleWrapper {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+@media screen and (min-width: 768px) {
+  main .whyUsSection .leftWrapper .leftContent .articleWrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  main .whyUsSection .leftWrapper .leftContent .articleWrapper {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 32px;
+    margin-bottom: 0;
+  }
+}
+@media screen and (min-width: 1400px) {
+  main .whyUsSection .leftWrapper .leftContent .articleWrapper {
+    gap: 40px;
+  }
+}
+main .whyUsSection .leftWrapper .leftContent .articleWrapper article {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+@media screen and (min-width: 768px) {
+  main .whyUsSection .leftWrapper .leftContent .articleWrapper article {
+    flex: 1 0 45%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  main .whyUsSection .leftWrapper .leftContent .articleWrapper article {
+    flex: 0 0 auto;
+  }
+}
+main .whyUsSection .leftWrapper .leftContent .articleWrapper article i {
+  border: 1px solid #f0efe9;
+  padding: 16px;
+  border-radius: 50%;
+}
+main .whyUsSection .leftWrapper .leftContent .articleWrapper article .txtWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+main .whyUsSection .leftWrapper .leftContent .articleWrapper article .txtWrapper h3 {
+  font-family: "DM Sans", sans-serif;
+  line-height: 150%;
+  font-weight: 700;
+}
+main .whyUsSection .leftWrapper .leftContent .articleWrapper article .txtWrapper p {
+  color: #595957;
+}
+main .whyUsSection .rightWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+@media screen and (min-width: 1200px) {
+  main .whyUsSection .rightWrapper {
+    width: 50%;
+    justify-content: flex-start;
+    align-self: flex-start;
+    flex-grow: 0;
+    padding-top: 21px;
+  }
+}
+main .whyUsSection .rightWrapper .rightContent {
+  position: relative;
+  width: 80%;
+}
+@media screen and (min-width: 992px) {
+  main .whyUsSection .rightWrapper .rightContent {
+    flex: 0 1 645px;
+    height: 100%;
+  }
+}
+main .whyUsSection .rightWrapper .rightContent img {
+  width: 100%;
+  z-index: 1;
+}
+main .whyUsSection .rightWrapper .background {
+  background-color: #f0efe9;
+  z-index: -1;
+  position: absolute;
+  left: 0;
+  top: 28%;
+  height: 85%;
+  width: 100%;
+}
+@media screen and (min-width: 992px) {
+  main .whyUsSection .rightWrapper .background {
+    left: -22%;
+    top: 28%;
+    height: 85%;
+    width: 122%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  main .whyUsSection .rightWrapper .background {
+    left: -100px;
+    width: calc(100% + 100px);
+  }
+}
+main .projectsSection img {
+  width: 200px;
+  height: 100px;
+}
+main .teamSection img {
+  width: 200px;
+  height: 100px;
+}
+main .testimonialSection img {
+  width: 50px;
+  height: 50px;
 }

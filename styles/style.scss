@@ -26,11 +26,6 @@ $largeDevice: 992px;
 $xLargeDevice: 1200px;
 $xxLargeDevice: 1400px;
 
-// $primaryColor1: #F0EFE9;
-// $primaryColor2: rgba(240, 209, 130, 0.9294);
-// $primaryColor3: #BEEBFF;
-// $primaryColor4: #0E1021;
-
 * {
   margin: 0;
   padding: 0;
@@ -448,18 +443,18 @@ main {
   }
 
   .aboutSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
     .contentWrapper {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      width: 100%;
+      width: 90%;
       margin: 80px 0;
-      @media screen and (min-width: $smallDevice) {
-        padding: 0 5%;
-      }
-      @media screen and (min-width: $mediumDevice) {
-      }
       @media screen and (min-width: $largeDevice) {
         flex-direction: row-reverse;
         align-items: flex-start;
@@ -469,10 +464,11 @@ main {
         justify-content: space-between;
         margin: 120px 0;
         max-width: $contentWidth;
+        padding: 0;
       }
 
       .txtWrapper {
-        width: 90%;
+        width: 100%;
         @media screen and (min-width: $largeDevice) {
           flex: 0 0 50%;
         }
@@ -511,6 +507,7 @@ main {
           }
         }
       }
+
       .imgWrapper {
         position: relative;
         padding-top: 64px;
@@ -600,9 +597,7 @@ main {
     background-repeat: no-repeat;
     background-position-y: 100%;
     background-position-x: 100%;
-    @media screen and (min-width: 1200px) {
-      align-items: center;
-    }
+
     .contentWrapper {
       display: flex;
       flex-direction: column;
@@ -613,7 +608,6 @@ main {
       @media screen and (min-width: $largeDevice) {
       }
       @media screen and (min-width: $xLargeDevice) {
-        // width: 100%;
         max-width: $contentWidth;
       }
       h2 {
@@ -668,6 +662,171 @@ main {
           }
         }
       }
+    }
+  }
+
+  .whyUsSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+    padding: 100px 0;
+    @media screen and (min-width: $xLargeDevice) {
+      flex-direction: row;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    .leftWrapper {
+      width: 90%;
+      @media screen and (min-width: $xLargeDevice) {
+        width: 50%;
+        display: flex;
+        justify-content: flex-end;
+      }
+
+      .leftContent {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @media screen and (min-width: $mediumDevice) {
+          flex: 0 1 645px;
+        }
+        @media screen and (min-width: $xLargeDevice) {
+          flex-direction: column;
+          padding-left: 48px;
+          padding-right: 20%;
+          align-items: flex-start;
+        }
+        @media screen and (min-width: $xxLargeDevice) {
+          padding-left: 0;
+        }
+
+        .articleWrapper {
+          display: flex;
+          flex-direction: column;
+          margin-top: 40px;
+          gap: 16px;
+          margin-bottom: 40px;
+          @media screen and (min-width: $mediumDevice) {
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 24px;
+          }
+          @media screen and (min-width: $xLargeDevice) {
+            flex-direction: column;
+            flex-wrap: nowrap;
+            gap: 32px;
+            margin-bottom: 0;
+          }
+          @media screen and (min-width: $xxLargeDevice) {
+            gap: 40px;
+          }
+
+          article {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            @media screen and (min-width: $mediumDevice) {
+              flex: 1 0 45%;
+            }
+            @media screen and (min-width: $xLargeDevice) {
+              flex: 0 0 auto;
+            }
+
+            i {
+              border: 1px solid $bgColor1;
+              padding: 16px;
+              border-radius: 50%;
+            }
+
+            .txtWrapper {
+              display: flex;
+              flex-direction: column;
+              gap: 4px;
+
+              h3 {
+                font-family: $font2;
+                line-height: 150%;
+                font-weight: 700;
+              }
+              p {
+                color: $fontColor2;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .rightWrapper {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      position: relative;
+      @media screen and (min-width: $xLargeDevice) {
+        width: 50%;
+        justify-content: flex-start;
+        align-self: flex-start;
+        flex-grow: 0;
+        padding-top: 21px;
+      }
+
+      .rightContent {
+        position: relative;
+        width: 80%;
+        @media screen and (min-width: $largeDevice) {
+          flex: 0 1 645px;
+          height: 100%;
+        }
+
+        img {
+          width: 100%;
+          z-index: 1;
+        }
+      }
+
+      .background {
+        background-color: $bgColor1;
+        z-index: -1;
+        position: absolute;
+        left: 0;
+        top: 28%;
+        height: 85%;
+        width: 100%;
+        @media screen and (min-width: $largeDevice) {
+          left: -22%;
+          top: 28%;
+          height: 85%;
+          width: calc(100% + 22%);
+        }
+        @media screen and (min-width: $xLargeDevice) {
+          left: -100px;
+          width: calc(100% + 100px);
+        }
+      }
+    }
+  }
+
+  .projectsSection {
+    img {
+      width: 200px;
+      height: 100px;
+    }
+  }
+
+  .teamSection {
+    img {
+      width: 200px;
+      height: 100px;
+    }
+  }
+
+  .testimonialSection {
+    img {
+      width: 50px;
+      height: 50px;
     }
   }
 }
