@@ -1,0 +1,413 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,700&display=swap");
+
+$contentWidth: 1320px;
+
+$fontColor1: #191919;
+$fontColor2: #595957;
+$fontColor3: #ffffff;
+$fontColor4: #f94d1c;
+$fontColor5: #b6b7bc;
+
+$font1: "Inter", sans-serif;
+$font2: "DM Sans", sans-serif;
+
+$btnColor1: #f9d783;
+$btnColor2: #191919;
+$btnColor3: #ffffff;
+
+$bgColor1: #f0efe9;
+$bgColor2: #beebff;
+$bgColor3: #edcf87;
+$bgColor4: #0e1021;
+
+$smallDevice: 576px;
+$mediumDevice: 768px;
+$largeDevice: 992px;
+$xLargeDevice: 1200px;
+$xxLargeDevice: 1400px;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  font-family: $font1;
+  font-weight: 400;
+  color: $fontColor1;
+}
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  background-color: transparent;
+  border: 1px solid black;
+  padding: 16px 24px;
+  border-radius: 27px;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: $fontColor1;
+  transition: 0.3s;
+  &:hover {
+    background-color: $btnColor2;
+    border-color: $btnColor2;
+    color: $fontColor3;
+  }
+}
+.btnYellow {
+  background-color: $btnColor1;
+  border-color: $btnColor1;
+}
+.btnWhite {
+  background-color: $btnColor3;
+}
+.btnBlack {
+  background-color: $btnColor2;
+  border-color: $btnColor2;
+  color: $fontColor3;
+  &:hover {
+    background-color: $btnColor1;
+    border-color: $btnColor1;
+    color: $fontColor1;
+  }
+}
+.btnRound {
+  width: 53.5px;
+  height: 53.5px;
+  border-radius: 50%;
+  padding: 0;
+}
+.sectionHeadingSmall {
+  color: $fontColor4;
+  font-weight: 500;
+  font-size: 18px;
+  align-self: flex-start;
+}
+.sectionHeadingBig {
+  font-family: $font2;
+  font-size: 40px;
+  line-height: 120%;
+  margin-top: 16px;
+  align-self: flex-start;
+  @media screen and (min-width: 768px) {
+    font-size: 48px;
+  }
+  @media screen and (min-width: 1200px) {
+    font-size: 48px;
+  }
+}
+.socialMediaIconsWrapper {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 24px;
+
+  .fa-brands {
+    cursor: pointer;
+  }
+}
+.dotWrapper {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 48px;
+  .fa-circle {
+    font-size: 14px;
+  }
+}
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: $bgColor1;
+
+  .contentWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 16px 8px 0;
+    @media screen and (min-width: $mediumDevice) {
+      gap: 30px;
+    }
+    @media screen and (min-width: $xLargeDevice) {
+      max-width: $contentWidth;
+      padding: 0;
+    }
+
+    .imgWrapper {
+      display: flex;
+      justify-content: center;
+      padding: 16px;
+      width: 200px;
+      height: 112px;
+
+      img {
+        width: 100%;
+        object-fit: contain;
+      }
+    }
+
+    .menu {
+      @media screen and (min-width: $mediumDevice) {
+        display: none;
+      }
+    }
+
+    .txtWrapper {
+      display: none;
+      @media screen and (min-width: $mediumDevice) {
+        display: flex;
+        width: 100%;
+      }
+      @media screen and (min-width: $largeDevice) {
+        align-self: stretch;
+        flex-direction: column;
+        justify-content: space-between;
+        flex-grow: 1;
+      }
+      @media screen and (min-width: $xLargeDevice) {
+      }
+
+      .topWrapper {
+        @media screen and (min-width: $mediumDevice) {
+          display: none;
+        }
+        @media screen and (min-width: $largeDevice) {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 12px 0;
+          border-bottom: 1px solid #dadad4;
+        }
+
+        .infoWrapper {
+          @media screen and (min-width: $largeDevice) {
+            display: flex;
+            gap: 16px;
+          }
+
+          div {
+            cursor: pointer;
+            @media screen and (min-width: $largeDevice) {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              flex-wrap: wrap;
+              gap: 9px;
+              padding-right: 11px;
+              border-right: 1px solid #dadad4;
+            }
+
+            &.lastOne {
+              border-right: none;
+            }
+
+            p {
+              @media screen and (min-width: $largeDevice) {
+                font-size: 15px;
+                font-weight: 400;
+              }
+            }
+          }
+        }
+      }
+
+      .bottomWrapper {
+        @media screen and (min-width: $mediumDevice) {
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-start;
+          width: 100%;
+        }
+
+        nav {
+          @media screen and (min-width: $mediumDevice) {
+            display: flex;
+            align-items: flex-start;
+            gap: 30px;
+            padding-top: 7px;
+          }
+          a {
+            text-decoration: none;
+            color: $fontColor1;
+            display: flex;
+            flex-direction: column;
+
+            &.active {
+              font-weight: 600;
+            }
+
+            &:hover::after {
+              content: "";
+              display: block;
+              border-bottom: 2px solid $fontColor1;
+              margin-top: 4px;
+              width: 16px;
+              align-self: center;
+            }
+          }
+        }
+
+        .loginBtn {
+          padding: 10px 24px;
+        }
+      }
+    }
+  }
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-color: $bgColor4;
+  color: $fontColor3;
+  .background {
+    background-image: url("/images/bg_white_lines_right_footer.svg");
+    background-repeat: no-repeat;
+    background-position-y: 100%;
+    background-position-x: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    .contentWrapper {
+      display: flex;
+      flex-direction: column;
+      width: 90%;
+      padding: 120px 0 100px 0;
+      @media screen and (min-width: $smallDevice) {
+      }
+      @media screen and (min-width: $largeDevice) {
+      }
+      @media screen and (min-width: $xLargeDevice) {
+        max-width: $contentWidth;
+      }
+      @media screen and (min-width: $xxLargeDevice) {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 40px;
+      }
+      .logoInfoWrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+        color: $fontColor5;
+        padding-bottom: 40px;
+
+        @media screen and (min-width: $largeDevice) {
+          flex-direction: row;
+          align-items: flex-end;
+        }
+        @media screen and (min-width: $xxLargeDevice) {
+          flex-direction: column;
+          align-items: flex-start;
+          padding: 0;
+        }
+        p {
+          @media screen and (min-width: $xxLargeDevice) {
+            max-width: 400px;
+            line-height: 162%;
+          }
+        }
+      }
+      .cardWrapper {
+        display: flex;
+        gap: 40px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        @media screen and (min-width: $xxLargeDevice) {
+          flex-wrap: nowrap;
+          flex-grow: 1;
+        }
+
+        article {
+          display: flex;
+          flex-direction: column;
+          flex: 1 1 40%;
+          min-width: 130px;
+          @media screen and (min-width: $smallDevice) {
+            flex: 1 1 45%;
+          }
+          @media screen and (min-width: $largeDevice) {
+            flex: 1 1 20%;
+          }
+          @media screen and (min-width: $largeDevice) {
+            // flex: 1 1 auto;
+          }
+          h4 {
+            color: $fontColor3;
+            margin-bottom: 18px;
+            @media screen and (min-width: $largeDevice) {
+              margin-bottom: 24px;
+            }
+          }
+          a {
+            text-decoration: none;
+            color: $fontColor5;
+            font-weight: 500;
+
+            padding: 8px 0;
+
+            list-style: none;
+            @media screen and (min-width: $smallDevice) {
+              white-space: nowrap;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .copyright {
+    width: 100%;
+    border-top: 1px solid $fontColor5;
+    padding: 24px 0;
+    display: flex;
+    justify-content: center;
+    background-color: $bgColor4;
+    .copyrightContentWrapper {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap-reverse;
+      width: 100%;
+      max-width: $contentWidth;
+      p {
+        color: $fontColor5;
+        line-height: 162%;
+        min-width: 250px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $smallDevice) {
+}
+@media screen and (min-width: $mediumDevice) {
+}
+@media screen and (min-width: $largeDevice) {
+}
+@media screen and (min-width: $xLargeDevice) {
+}
+@media screen and (min-width: $xxLargeDevice) {
+}
