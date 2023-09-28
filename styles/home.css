@@ -68,27 +68,30 @@ body {
   color: #f94d1c;
   font-weight: 500;
   font-size: 18px;
-  align-self: flex-start;
+  align-self: center;
+  text-align: center;
 }
-
+@media screen and (min-width: 768px) {
+  .sectionHeadingSmall {
+    align-self: flex-start;
+    text-align: left;
+  }
+}
 .sectionHeadingBig {
   font-family: "DM Sans", sans-serif;
   font-size: 40px;
   line-height: 120%;
   margin-top: 16px;
-  align-self: flex-start;
+  align-self: center;
+  text-align: center;
 }
 @media screen and (min-width: 768px) {
   .sectionHeadingBig {
     font-size: 48px;
+    align-self: flex-start;
+    text-align: left;
   }
 }
-@media screen and (min-width: 1200px) {
-  .sectionHeadingBig {
-    font-size: 48px;
-  }
-}
-
 .socialMediaIconsWrapper {
   display: flex;
   align-items: center;
@@ -145,6 +148,9 @@ header .contentWrapper .imgWrapper img {
   width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
+}
+header .contentWrapper .menu {
+  font-size: 40px;
 }
 @media screen and (min-width: 768px) {
   header .contentWrapper .menu {
@@ -568,6 +574,17 @@ footer .copyright .copyrightContentWrapper p {
 }
 .featuresSection .txtWrapper .learnMoreBtn {
   margin-top: 40px;
+  align-self: center;
+}
+@media screen and (min-width: 768px) {
+  .featuresSection .txtWrapper .learnMoreBtn {
+    align-self: flex-start;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .featuresSection .txtWrapper .learnMoreBtn {
+    width: 100%;
+  }
 }
 .featuresSection .featureWrapper {
   display: flex;
@@ -583,12 +600,20 @@ footer .copyright .copyrightContentWrapper p {
 .featuresSection .featureWrapper article {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 10px;
+  text-align: center;
   padding: 24px 40px;
 }
 @media screen and (min-width: 576px) {
   .featuresSection .featureWrapper article {
     flex: 0 1 45%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .featuresSection .featureWrapper article {
+    align-items: flex-start;
+    text-align: left;
   }
 }
 @media screen and (min-width: 992px) {
@@ -1276,9 +1301,14 @@ footer .copyright .copyrightContentWrapper p {
   }
 }
 .newsSection .contentWrapper .topWrapper a {
-  align-self: flex-end;
   white-space: nowrap;
+  align-self: center;
   margin-top: 24px;
+}
+@media screen and (min-width: 768px) {
+  .newsSection .contentWrapper .topWrapper a {
+    align-self: flex-end;
+  }
 }
 .newsSection .contentWrapper .cardWrapper {
   display: flex;

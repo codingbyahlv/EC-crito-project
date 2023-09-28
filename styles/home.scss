@@ -149,6 +149,19 @@
 
     .learnMoreBtn {
       margin-top: 40px;
+      align-self: center;
+      @media screen and (min-width: $smallDevice) {
+      }
+      @media screen and (min-width: $mediumDevice) {
+        align-self: flex-start;
+      }
+      @media screen and (min-width: $largeDevice) {
+      }
+      @media screen and (min-width: $xLargeDevice) {
+        width: 100%;
+      }
+      @media screen and (min-width: $xxLargeDevice) {
+      }
     }
   }
 
@@ -156,7 +169,7 @@
     display: flex;
     flex-direction: column;
     gap: 30px;
-    @media screen and (min-width: 576px) {
+    @media screen and (min-width: $smallDevice) {
       flex-direction: row;
       flex-wrap: wrap;
     }
@@ -164,12 +177,18 @@
     article {
       display: flex;
       flex-direction: column;
+      align-items: center;
       gap: 10px;
+      text-align: center;
       padding: 24px 40px;
-      @media screen and (min-width: 576px) {
+      @media screen and (min-width: $smallDevice) {
         flex: 0 1 45%;
       }
-      @media screen and (min-width: 992px) {
+      @media screen and (min-width: $mediumDevice) {
+        align-items: flex-start;
+        text-align: left;
+      }
+      @media screen and (min-width: $largeDevice) {
         padding: 24px 0px;
       }
 
@@ -186,8 +205,7 @@
       p {
         line-height: 156%;
         font-weight: 400;
-        //justera align på texten vid ca 1050px
-        @media screen and (min-width: 1200px) {
+        @media screen and (min-width: $xLargeDevice) {
           width: 90%;
         }
       }
@@ -820,9 +838,20 @@
         align-items: flex-end;
       }
       a {
-        align-self: flex-end;
         white-space: nowrap;
+        align-self: center;
         margin-top: 24px;
+        @media screen and (min-width: $smallDevice) {
+        }
+        @media screen and (min-width: $mediumDevice) {
+          align-self: flex-end;
+        }
+        @media screen and (min-width: $largeDevice) {
+        }
+        @media screen and (min-width: $xLargeDevice) {
+        }
+        @media screen and (min-width: $xxLargeDevice) {
+        }
       }
     }
 

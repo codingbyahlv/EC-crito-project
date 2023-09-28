@@ -68,27 +68,30 @@ body {
   color: #f94d1c;
   font-weight: 500;
   font-size: 18px;
-  align-self: flex-start;
+  align-self: center;
+  text-align: center;
 }
-
+@media screen and (min-width: 768px) {
+  .sectionHeadingSmall {
+    align-self: flex-start;
+    text-align: left;
+  }
+}
 .sectionHeadingBig {
   font-family: "DM Sans", sans-serif;
   font-size: 40px;
   line-height: 120%;
   margin-top: 16px;
-  align-self: flex-start;
+  align-self: center;
+  text-align: center;
 }
 @media screen and (min-width: 768px) {
   .sectionHeadingBig {
     font-size: 48px;
+    align-self: flex-start;
+    text-align: left;
   }
 }
-@media screen and (min-width: 1200px) {
-  .sectionHeadingBig {
-    font-size: 48px;
-  }
-}
-
 .socialMediaIconsWrapper {
   display: flex;
   align-items: center;
@@ -145,6 +148,9 @@ header .contentWrapper .imgWrapper img {
   width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
+}
+header .contentWrapper .menu {
+  font-size: 40px;
 }
 @media screen and (min-width: 768px) {
   header .contentWrapper .menu {
