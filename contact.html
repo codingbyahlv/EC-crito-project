@@ -20,7 +20,19 @@
         <a href="index.html" class="imgWrapper">
           <img src="images/logo_crito_black.png" alt="" />
         </a>
-        <i class="fa-solid fa-bars menu"></i>
+        <i class="fa-solid fa-bars menu" onclick="toggleMenu('open')"></i>
+        <div class="mobileMenu" id="mobileMenu">
+          <i class="fa-solid fa-xmark xMenu" onclick="toggleMenu('close')"></i>
+          <nav>
+            <a href="index.html" class="" onclick="toggleMenu('close')">Home</a>
+            <a href="#" class="">Service</a>
+            <a href="#" class="">News</a>
+            <a href="contact.html" class="active" onclick="toggleMenu('close')"
+              >Contact</a
+            >
+          </nav>
+        </div>
+
         <div class="txtWrapper">
           <div class="topWrapper">
             <div class="infoWrapper">
@@ -185,6 +197,6 @@
         </div>
       </section>
     </footer>
-    <script src="" async defer></script>
+    <script src="./scripts/script.js" async defer></script>
   </body>
 </html>

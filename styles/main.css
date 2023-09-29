@@ -77,6 +77,7 @@ body {
     text-align: left;
   }
 }
+
 .sectionHeadingBig {
   font-family: "DM Sans", sans-serif;
   font-size: 40px;
@@ -92,6 +93,7 @@ body {
     text-align: left;
   }
 }
+
 .socialMediaIconsWrapper {
   display: flex;
   align-items: center;
@@ -103,13 +105,31 @@ body {
 }
 
 .dotWrapper {
-  display: flex;
-  justify-content: center;
-  gap: 16px;
-  margin-top: 48px;
+  display: none;
+}
+@media screen and (min-width: 576px) {
+  .dotWrapper {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 48px;
+  }
 }
 .dotWrapper .fa-circle {
   font-size: 14px;
+}
+
+.showMoreBtn {
+  font-weight: 500;
+  font-family: "Inter", sans-serif;
+  align-self: center;
+  padding: 8px 12px;
+  margin-top: 48px;
+}
+@media screen and (min-width: 576px) {
+  .showMoreBtn {
+    display: none;
+  }
 }
 
 header {
@@ -134,6 +154,10 @@ header .contentWrapper {
 @media screen and (min-width: 1200px) {
   header .contentWrapper {
     max-width: 1320px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  header .contentWrapper {
     padding: 0;
   }
 }
@@ -156,6 +180,45 @@ header .contentWrapper .menu {
   header .contentWrapper .menu {
     display: none;
   }
+}
+header .contentWrapper .mobileMenu {
+  display: none;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  z-index: 3;
+  background-color: #beebff;
+  height: 100vh;
+  width: 100vw;
+}
+@media screen and (min-width: 768px) {
+  header .contentWrapper .mobileMenu {
+    display: none;
+  }
+}
+header .contentWrapper .mobileMenu .xMenu {
+  align-self: flex-end;
+  font-size: 40px;
+  padding: 32px 16px;
+}
+@media screen and (min-width: 768px) {
+  header .contentWrapper .mobileMenu .xMenu {
+    display: none;
+  }
+}
+header .contentWrapper .mobileMenu nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  margin-top: 30%;
+}
+header .contentWrapper .mobileMenu nav a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #191919;
+  font-size: 22px;
+  font-weight: 600;
 }
 header .contentWrapper .txtWrapper {
   display: none;
@@ -382,13 +445,19 @@ footer .copyright {
 }
 footer .copyright .copyrightContentWrapper {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   gap: 16px;
   flex-wrap: wrap-reverse;
   width: 100%;
   max-width: 1320px;
 }
+@media screen and (min-width: 576px) {
+  footer .copyright .copyrightContentWrapper {
+    justify-content: space-between;
+  }
+}
 footer .copyright .copyrightContentWrapper p {
+  text-align: center;
   color: #b6b7bc;
   line-height: 162%;
   min-width: 250px;

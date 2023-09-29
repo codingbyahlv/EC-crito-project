@@ -55,6 +55,7 @@ body {
   text-decoration: none;
   color: $fontColor1;
   transition: 0.3s;
+
   &:hover {
     background-color: $btnColor2;
     border-color: $btnColor2;
@@ -72,6 +73,7 @@ body {
   background-color: $btnColor2;
   border-color: $btnColor2;
   color: $fontColor3;
+
   &:hover {
     background-color: $btnColor1;
     border-color: $btnColor1;
@@ -90,17 +92,9 @@ body {
   font-size: 18px;
   align-self: center;
   text-align: center;
-  @media screen and (min-width: $smallDevice) {
-  }
   @media screen and (min-width: $mediumDevice) {
     align-self: flex-start;
     text-align: left;
-  }
-  @media screen and (min-width: $largeDevice) {
-  }
-  @media screen and (min-width: $xLargeDevice) {
-  }
-  @media screen and (min-width: $xxLargeDevice) {
   }
 }
 .sectionHeadingBig {
@@ -110,18 +104,10 @@ body {
   margin-top: 16px;
   align-self: center;
   text-align: center;
-  @media screen and (min-width: $smallDevice) {
-  }
   @media screen and (min-width: $mediumDevice) {
     font-size: 48px;
     align-self: flex-start;
     text-align: left;
-  }
-  @media screen and (min-width: $largeDevice) {
-  }
-  @media screen and (min-width: $xLargeDevice) {
-  }
-  @media screen and (min-width: $xxLargeDevice) {
   }
 }
 .socialMediaIconsWrapper {
@@ -135,12 +121,26 @@ body {
   }
 }
 .dotWrapper {
-  display: flex;
-  justify-content: center;
-  gap: 16px;
-  margin-top: 48px;
+  display: none;
+  @media screen and (min-width: $smallDevice) {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 48px;
+  }
+
   .fa-circle {
     font-size: 14px;
+  }
+}
+.showMoreBtn {
+  font-weight: 500;
+  font-family: $font1;
+  align-self: center;
+  padding: 8px 12px;
+  margin-top: 48px;
+  @media screen and (min-width: $smallDevice) {
+    display: none;
   }
 }
 
@@ -162,6 +162,8 @@ header {
     }
     @media screen and (min-width: $xLargeDevice) {
       max-width: $contentWidth;
+    }
+    @media screen and (min-width: $xxLargeDevice) {
       padding: 0;
     }
 
@@ -185,6 +187,42 @@ header {
       }
     }
 
+    .mobileMenu {
+      display: none;
+      flex-direction: column;
+      position: fixed;
+      top: 0;
+      z-index: 3;
+      background-color: $bgColor2;
+      height: 100vh;
+      width: 100vw;
+      @media screen and (min-width: $mediumDevice) {
+        display: none;
+      }
+      .xMenu {
+        align-self: flex-end;
+        font-size: 40px;
+        padding: 32px 16px;
+        @media screen and (min-width: $mediumDevice) {
+          display: none;
+        }
+      }
+      nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 32px;
+        margin-top: 30%;
+        a {
+          text-decoration: none;
+          text-transform: uppercase;
+          color: $fontColor1;
+          font-size: 22px;
+          font-weight: 600;
+        }
+      }
+    }
+
     .txtWrapper {
       display: none;
       @media screen and (min-width: $mediumDevice) {
@@ -196,8 +234,6 @@ header {
         flex-direction: column;
         justify-content: space-between;
         flex-grow: 1;
-      }
-      @media screen and (min-width: $xLargeDevice) {
       }
 
       .topWrapper {
@@ -259,6 +295,7 @@ header {
             gap: 30px;
             padding-top: 7px;
           }
+
           a {
             text-decoration: none;
             color: $fontColor1;
@@ -302,6 +339,7 @@ footer {
   width: 100%;
   background-color: $bgColor4;
   color: $fontColor3;
+
   .background {
     background-image: url("/images/bg_white_lines_right_footer.svg");
     background-repeat: no-repeat;
@@ -316,10 +354,6 @@ footer {
       flex-direction: column;
       width: 90%;
       padding: 120px 0 100px 0;
-      @media screen and (min-width: $smallDevice) {
-      }
-      @media screen and (min-width: $largeDevice) {
-      }
       @media screen and (min-width: $xLargeDevice) {
         max-width: $contentWidth;
       }
@@ -335,7 +369,6 @@ footer {
         gap: 24px;
         color: $fontColor5;
         padding-bottom: 40px;
-
         @media screen and (min-width: $largeDevice) {
           flex-direction: row;
           align-items: flex-end;
@@ -345,6 +378,7 @@ footer {
           align-items: flex-start;
           padding: 0;
         }
+
         p {
           @media screen and (min-width: $xxLargeDevice) {
             max-width: 400px;
@@ -352,6 +386,7 @@ footer {
           }
         }
       }
+
       .cardWrapper {
         display: flex;
         gap: 40px;
@@ -373,9 +408,7 @@ footer {
           @media screen and (min-width: $largeDevice) {
             flex: 1 1 20%;
           }
-          @media screen and (min-width: $largeDevice) {
-            // flex: 1 1 auto;
-          }
+
           h4 {
             color: $fontColor3;
             margin-bottom: 18px;
@@ -383,13 +416,12 @@ footer {
               margin-bottom: 24px;
             }
           }
+
           a {
             text-decoration: none;
             color: $fontColor5;
             font-weight: 500;
-
             padding: 8px 0;
-
             list-style: none;
             @media screen and (min-width: $smallDevice) {
               white-space: nowrap;
@@ -407,14 +439,20 @@ footer {
     display: flex;
     justify-content: center;
     background-color: $bgColor4;
+
     .copyrightContentWrapper {
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       gap: 16px;
       flex-wrap: wrap-reverse;
       width: 100%;
       max-width: $contentWidth;
+      @media screen and (min-width: $smallDevice) {
+        justify-content: space-between;
+      }
+
       p {
+        text-align: center;
         color: $fontColor5;
         line-height: 162%;
         min-width: 250px;
