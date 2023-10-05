@@ -623,6 +623,9 @@ footer .copyright .copyrightContentWrapper p {
   height: 160px;
   margin-bottom: 16px;
 }
+.contactSection .contentWrapper form button {
+  font-family: "Inter", sans-serif;
+}
 
 .mapSection {
   width: 100%;
