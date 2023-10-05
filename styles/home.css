@@ -211,7 +211,7 @@ header .contentWrapper .mobileMenu nav {
   flex-direction: column;
   align-items: center;
   gap: 32px;
-  margin-top: 30%;
+  margin-top: 20%;
 }
 header .contentWrapper .mobileMenu nav a {
   text-decoration: none;
@@ -550,6 +550,7 @@ footer .copyright .copyrightContentWrapper p {
 .heroSection .contentWrapper .txtWrapper .btnWrapper {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 16px;
   margin-top: 16px;
 }
@@ -557,6 +558,9 @@ footer .copyright .copyrightContentWrapper p {
   .heroSection .contentWrapper .txtWrapper .btnWrapper {
     justify-content: flex-start;
   }
+}
+.heroSection .contentWrapper .txtWrapper .btnWrapper a {
+  white-space: nowrap;
 }
 .heroSection .contentWrapper .imgWrapper {
   display: flex;
@@ -762,7 +766,14 @@ footer .copyright .copyrightContentWrapper p {
 }
 .aboutSection .contentWrapper .txtWrapper .btnWrapper {
   display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   gap: 32px;
+}
+@media screen and (min-width: 768px) {
+  .aboutSection .contentWrapper .txtWrapper .btnWrapper {
+    justify-content: flex-start;
+  }
 }
 .aboutSection .contentWrapper .txtWrapper .btnWrapper .playBtnWrapper {
   display: flex;
@@ -826,13 +837,14 @@ footer .copyright .copyrightContentWrapper p {
   left: 2%;
   background-color: #beebff;
   max-width: 96%;
-  padding: 16px;
+  padding: 8px;
   display: flex;
   flex-direction: column;
   gap: 4px;
 }
 @media screen and (min-width: 576px) {
   .aboutSection .contentWrapper .imgWrapper .imgTxtWrapper {
+    padding: 16px;
     max-width: 368px;
   }
 }
@@ -897,6 +909,7 @@ footer .copyright .copyrightContentWrapper p {
   flex-direction: column;
   background-color: #fff;
   padding: 48px 30px;
+  transition: 0.3s;
 }
 @media screen and (min-width: 576px) {
   .servicesSection .contentWrapper .serviceWrapper article {
@@ -911,9 +924,9 @@ footer .copyright .copyrightContentWrapper p {
 .servicesSection .contentWrapper .serviceWrapper article:hover {
   background-color: #edcf87;
 }
-.servicesSection .contentWrapper .serviceWrapper article:hover .button {
+.servicesSection .contentWrapper .serviceWrapper article .button:hover {
   background-color: #ffffff;
-  border-color: #fff;
+  border-color: #ffffff;
   color: #191919;
 }
 .servicesSection .contentWrapper .serviceWrapper article h3 {
@@ -1466,8 +1479,23 @@ footer .copyright .copyrightContentWrapper p {
   padding: 100px 0;
   background-image: url("/images/bg_grey_lines.svg");
   background-repeat: no-repeat;
-  background-position-y: 80%;
+  background-position-y: 95%;
   background-position-x: 100%;
+}
+@media screen and (min-width: 768px) {
+  .signupSection {
+    background-position-y: 80%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .signupSection {
+    background-position-y: 95%;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .signupSection {
+    background-position-y: 80%;
+  }
 }
 .signupSection .contentWrapper {
   display: flex;
@@ -1503,10 +1531,10 @@ footer .copyright .copyrightContentWrapper p {
   border: none;
   border-radius: 27px;
   flex-grow: 1;
-  min-width: 300px;
 }
 @media screen and (min-width: 576px) {
   .signupSection .contentWrapper form input {
+    min-width: 300px;
     max-width: 400px;
   }
 }

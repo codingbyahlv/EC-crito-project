@@ -69,10 +69,14 @@
       .btnWrapper {
         display: flex;
         justify-content: center;
+        flex-wrap: wrap;
         gap: 16px;
         margin-top: 16px;
         @media screen and (min-width: $mediumDevice) {
           justify-content: flex-start;
+        }
+        a {
+          white-space: nowrap;
         }
       }
     }
@@ -260,7 +264,12 @@
 
       .btnWrapper {
         display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
         gap: 32px;
+        @media screen and (min-width: $mediumDevice) {
+          justify-content: flex-start;
+        }
 
         .playBtnWrapper {
           display: flex;
@@ -319,11 +328,12 @@
         left: 2%;
         background-color: $bgColor2;
         max-width: 96%;
-        padding: 16px;
+        padding: 8px;
         display: flex;
         flex-direction: column;
         gap: 4px;
         @media screen and (min-width: $smallDevice) {
+          padding: 16px;
           max-width: 368px;
         }
         @media screen and (min-width: $xLargeDevice) {
@@ -391,19 +401,21 @@
         flex-direction: column;
         background-color: #fff;
         padding: 48px 30px;
+        transition: 0.3s;
         @media screen and (min-width: $smallDevice) {
           flex: 1 1 47%;
         }
         @media screen and (min-width: $xLargeDevice) {
           flex: 1 1 23%;
         }
-
         &:hover {
           background-color: $bgColor3;
+        }
 
-          .button {
+        .button {
+          &:hover {
             background-color: $btnColor3;
-            border-color: #fff;
+            border-color: $btnColor3;
             color: $fontColor1;
           }
         }
@@ -927,8 +939,17 @@
   padding: 100px 0;
   background-image: url("/images/bg_grey_lines.svg");
   background-repeat: no-repeat;
-  background-position-y: 80%;
+  background-position-y: 95%;
   background-position-x: 100%;
+  @media screen and (min-width: $mediumDevice) {
+    background-position-y: 80%;
+  }
+  @media screen and (min-width: $xLargeDevice) {
+    background-position-y: 95%;
+  }
+  @media screen and (min-width: $xxLargeDevice) {
+    background-position-y: 80%;
+  }
 
   .contentWrapper {
     display: flex;
@@ -958,8 +979,8 @@
         border: none;
         border-radius: 27px;
         flex-grow: 1;
-        min-width: 300px;
         @media screen and (min-width: $smallDevice) {
+          min-width: 300px;
           max-width: 400px;
         }
         &::placeholder {
