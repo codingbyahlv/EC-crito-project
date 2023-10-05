@@ -1550,4 +1550,5 @@ footer .copyright .copyrightContentWrapper p {
 }
 .signupSection .contentWrapper form button {
   align-self: center;
+  font-family: "Inter", sans-serif;
 }
